@@ -76,6 +76,26 @@ export const sendGridSelection = async (selectedQuadrants) => {
   // Simulate a delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  // Mock response indicating success
-  return { success: true };
+  try {
+    const response = await fetch(`${BASE_URL}/submit_selection`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ selectedQuadrants }), // Send selected quadrants data in JSON format
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to send grid selection');
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error sending grid selection:', error);
+    return { success: false, error: error.message };
+  }
 };
+
+
+

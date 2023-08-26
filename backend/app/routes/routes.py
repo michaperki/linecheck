@@ -1,5 +1,5 @@
 # app/routes/routes.py
-from flask import Blueprint, request, send_from_directory
+from flask import Blueprint, request, send_from_directory, jsonify
 import os
 import cv2
 import uuid
@@ -36,6 +36,9 @@ def process_video_route():
 @app.route('/processed_videos/<path:filename>')
 def processed_videos(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename)
+
+
+# new routes below
 
 @app.route('/images/<path:video_id>/<path:frame_filename>')
 def images(video_id, frame_filename):
@@ -83,3 +86,17 @@ def upload_video():
     
     # Return a response indicating success and the generated video ID
     return {"success": True, "video_id": video_id, "frame_path": frame_path}
+
+@app.route("/submit_selection", methods=["POST"])
+def submit_selection():
+    try:
+        data = request.json  # Get JSON data from the request body
+        selected_quadrants = data.get("selectedQuadrants", [])
+
+        # Process the selected quadrants here
+        # You can perform any necessary backend operations using the selected data
+
+        # For demonstration purposes, you can return a success response
+        return jsonify({"success": True})
+    except Exception as e:
+        return jsonify({"success": False, "error": str(e)})
