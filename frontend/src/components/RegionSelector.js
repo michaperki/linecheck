@@ -1,5 +1,3 @@
-// src/components/RegionSelector.js
-
 import React, { useState } from 'react';
 import ImageDisplay from './ImageDisplay';
 import { sendGridSelection } from '../utils/mockApiUtils';
@@ -34,7 +32,6 @@ const RegionSelector = ({ firstFrameUrl }) => {
       >
         Submit
       </button>
-      
     </div>
   );
 };

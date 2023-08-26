@@ -1,25 +1,33 @@
-// src/App.js
-
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import UploadPage from "./pages/UploadPage";
 import AnalysisPage from "./pages/AnalysisPage";
 import DataDisplay from "./components/DataDisplay";
-import Header from "./components/Header"; // Import the Header component
-
-import { getFirstFrameUrl } from "./utils/mockApiUtils"; // Import the mock API function
+import Header from "./components/Header";
+import { getFirstFrameUrl, generateVideoId } from "./utils/mockApiUtils"; // Import the updated mock API function and generateVideoId
 
 function App() {
   const [firstFrameUrl, setFirstFrameUrl] = useState(null);
+  const [videoId, setVideoId] = useState(0); // Store the generated video ID
 
   useEffect(() => {
-    // Simulate getting the URL of the first frame
-    getFirstFrameUrl("mocked-video-id").then((url) => {
-      setFirstFrameUrl(url);
-    });
+    // Fetch the first frame URL when the component mounts
+    fetchFirstFrameUrl();
   }, []);
 
+  const fetchFirstFrameUrl = async () => {
+    try {
+      // Simulate fetching the first frame URL from the API
+      const response = await getFirstFrameUrl(videoId);
+
+      // Set the first frame URL in state
+      setFirstFrameUrl(response);
+    } catch (error) {
+      console.error("Error fetching first frame URL:", error);
+    }
+  };
+  
   return (
     <Router>
       <div className="App">
@@ -31,7 +39,10 @@ function App() {
             path="/analysis"
             element={<AnalysisPage firstFrameUrl={firstFrameUrl} />}
           />
-          <Route path="/data/:videoId" element={<DataDisplay />} />
+          <Route
+            path="/data/:videoId"
+            element={<DataDisplay videoId={videoId} />} // Pass the generated video ID to DataDisplay
+          />
         </Routes>
       </div>
     </Router>

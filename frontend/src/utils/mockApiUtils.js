@@ -1,12 +1,26 @@
 // utils/mockApiUtils.js
 
-// Mock function to simulate video upload
-export const uploadVideo = async (videoFile) => {
-  // Simulate uploading by waiting for a short time
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+// Function to generate a unique video id
+export const generateVideoId = () => {
+  const numbers = "0123456789";
 
-  // Return a mock response with a video ID
-  return { videoId: "mocked-video-id" };
+  // Generate a random 6 digit number
+  let videoId = "";
+  for (let i = 0; i < 6; i++) {
+    videoId += numbers.charAt(Math.floor(Math.random() * numbers.length));
+  }
+
+  return videoId;
+};
+
+// Mock function to simulate video upload and return a video_id
+export const uploadVideo = async (videoFile) => {
+  // Simulate a delay
+  await new Promise((resolve) => setTimeout(resolve, 1500));
+
+  // Mock response with a generated video_id
+  const videoId = generateVideoId(); // You can create a function to generate unique video ids
+  return { success: true, videoId };
 };
 
 // Mock function to simulate fetching analysis results from the backend
@@ -24,13 +38,14 @@ export const getAnalysisResults = async (videoId) => {
   return mockResults;
 };
 
-// Mock function to simulate getting the URL of the first frame
+const BASE_URL = 'http://localhost:5000'; // Update this with your actual backend URL
+
 export const getFirstFrameUrl = async (videoId) => {
   // Simulate a delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
-  // Return mock first frame URL from the public folder
-  return process.env.PUBLIC_URL + "/test_frame.jpg";
+  // Return URL to fetch image from the backend
+  return `${BASE_URL}/images/${videoId}.jpg`;
 };
 
 // Mock function to simulate sending grid selection to the backend

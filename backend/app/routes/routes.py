@@ -35,12 +35,12 @@ def process_video_route():
 def processed_videos(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename)
 
-@app.route('/fetch_image', methods=['GET'])
-def fetch_image():
-    try:
-        # Construct the processed image path dynamically based on your logic
-        processed_image_path = "/processed_videos/d5/0.jpg"  # Replace this with your dynamic logic
-
-        return jsonify({'success': True, 'processed_image_path': processed_image_path})
-    except Exception as e:
-        return jsonify({'success': False, 'error': str(e)})
+@app.route('/images/<path:filename>')
+def images(filename):
+    print("images endpoint")    
+    # Construct the full path using the project's root directory
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # Adjust the number of '..' based on your project structure
+    full_path = os.path.join(root_dir, 'backend', 'uploaded_videos', filename)
+    print("Full path:", full_path)
+    
+    return send_from_directory(os.path.join(root_dir, 'backend', 'uploaded_videos'), filename)

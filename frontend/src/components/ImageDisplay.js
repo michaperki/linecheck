@@ -1,7 +1,4 @@
-// src/components/ImageDisplay.js
-
 import React from 'react';
-import { sendGridSelection } from '../utils/mockApiUtils';
 import './ImageDisplay.css';
 
 const ImageDisplay = ({ firstFrameUrl, selectedQuadrant, onQuadrantClick }) => {
