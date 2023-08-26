@@ -1,3 +1,4 @@
 # app/config.py
 class Config:
-    UPLOAD_FOLDER = 'temp_videos'  # Update with your desired upload folder
+    PROCESSED_FOLDER = 'processed_videos' 
+    UPLOAD_FOLDER = 'uploaded_videos'
