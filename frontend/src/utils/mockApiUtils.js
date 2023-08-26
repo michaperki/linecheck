@@ -1,5 +1,7 @@
 // utils/mockApiUtils.js
 
+const BASE_URL = 'http://localhost:5000'; // Update this with your actual backend URL
+
 // Function to generate a unique video id
 export const generateVideoId = () => {
   const numbers = "0123456789";
@@ -18,9 +20,32 @@ export const uploadVideo = async (videoFile) => {
   // Simulate a delay
   await new Promise((resolve) => setTimeout(resolve, 1500));
 
-  // Mock response with a generated video_id
-  const videoId = generateVideoId(); // You can create a function to generate unique video ids
-  return { success: true, videoId };
+  // Create a FormData object to send the video file
+  const formData = new FormData();
+  formData.append('video', videoFile);
+
+  // Simulate sending a POST request to the backend's video upload endpoint
+  try {
+    const response = await fetch(`${BASE_URL}/upload_video`, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Video upload failed');
+    }
+
+    const data = await response.json();
+    
+    if (data.success) {
+      return { success: true, videoId: data.video_id }; // Update the key to "video_id"
+    } else {
+      throw new Error('Return of videoId failed');
+    }
+  } catch (error) {
+    console.error(error);
+    return { success: false, videoId: null };
+  }
 };
 
 // Mock function to simulate fetching analysis results from the backend
@@ -38,14 +63,12 @@ export const getAnalysisResults = async (videoId) => {
   return mockResults;
 };
 
-const BASE_URL = 'http://localhost:5000'; // Update this with your actual backend URL
-
 export const getFirstFrameUrl = async (videoId) => {
   // Simulate a delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
   // Return URL to fetch image from the backend
-  return `${BASE_URL}/images/${videoId}.jpg`;
+  return `${BASE_URL}/images/${videoId}/frame.jpg`; // Assuming 'frame.jpg' is the filename of the first frame
 };
 
 // Mock function to simulate sending grid selection to the backend

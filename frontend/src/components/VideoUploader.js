@@ -2,8 +2,11 @@
 
 import React, { useState } from 'react';
 import { uploadVideo } from '../utils/mockApiUtils'; // Replace with actual API utils
+import { useNavigate } from 'react-router-dom';
 
 const VideoUploader = () => {
+  const navigate = useNavigate();
+
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploading, setUploading] = useState(false);
 
@@ -18,6 +21,9 @@ const VideoUploader = () => {
       try {
         const response = await uploadVideo(selectedFile); // Replace with actual API call
         console.log('Video uploaded:', response);
+        if (response.videoId) {
+          navigate(`/analysis/${response.videoId}`);
+        }
 
         // Reset the form after successful upload
         setSelectedFile(null);

@@ -1,8 +1,10 @@
 # app/routes/routes.py
-from flask import request, jsonify, send_from_directory
+from flask import Blueprint, request, send_from_directory
+import os
+import cv2
+import uuid
 from app import app
 from app.modules.video_processing import process_video
-import os
 
 @app.route('/process_video', methods=['POST'])
 def process_video_route():
@@ -35,12 +37,49 @@ def process_video_route():
 def processed_videos(filename):
     return send_from_directory(app.config['PROCESSED_FOLDER'], filename)
 
-@app.route('/images/<path:filename>')
-def images(filename):
+@app.route('/images/<path:video_id>/<path:frame_filename>')
+def images(video_id, frame_filename):
     print("images endpoint")    
     # Construct the full path using the project's root directory
     root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # Adjust the number of '..' based on your project structure
-    full_path = os.path.join(root_dir, 'backend', 'uploaded_videos', filename)
+    full_path = os.path.join(root_dir, 'backend', 'uploaded_videos', 'frames', video_id, frame_filename)
     print("Full path:", full_path)
     
-    return send_from_directory(os.path.join(root_dir, 'backend', 'uploaded_videos'), filename)
+    return send_from_directory(os.path.join(root_dir, 'backend', 'uploaded_videos', 'frames', video_id), frame_filename)
+
+@app.route("/upload_video", methods=["POST"])
+def upload_video():
+    print("upload_video endpoint")
+    if "video" not in request.files:
+        return {"error": "No video file provided"}, 400
+
+    video_file = request.files["video"]
+    
+    # Generate a unique ID for the video
+    video_id = str(uuid.uuid4())
+    
+    # Define the path to store the video
+    video_path = os.path.join(app.config["UPLOAD_FOLDER"], "videos", f"{video_id}.mp4")
+    
+    # Save the video file
+    video_file.save(video_path)
+    
+    # Read the first frame from the video
+    cap = cv2.VideoCapture(video_path)
+    ret, frame = cap.read()
+    cap.release()
+    
+    if not ret:
+        return {"error": "Failed to read the first frame from the video"}, 500
+    
+    # Create a sub-folder in FRAMES_FOLDER using video ID as the folder name
+    os.makedirs(os.path.join(app.config["UPLOAD_FOLDER"], "frames", video_id), exist_ok=True)
+    
+    # Define the path to store the first frame
+    frame_path = os.path.join(app.config["UPLOAD_FOLDER"], "frames", video_id, "frame.jpg")    
+    
+    # Save the first frame
+    cv2.imwrite(frame_path, frame)
+    
+    # Return a response indicating success and the generated video ID
+    return {"success": True, "video_id": video_id, "frame_path": frame_path}

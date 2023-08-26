@@ -20,14 +20,17 @@ function App() {
     try {
       // Simulate fetching the first frame URL from the API
       const response = await getFirstFrameUrl(videoId);
-
+  
       // Set the first frame URL in state
       setFirstFrameUrl(response);
+  
+      // Set the video ID in state
+      setVideoId(response.videoId);
     } catch (error) {
       console.error("Error fetching first frame URL:", error);
     }
   };
-  
+
   return (
     <Router>
       <div className="App">
@@ -37,6 +40,10 @@ function App() {
           <Route path="/upload" element={<UploadPage />} />
           <Route
             path="/analysis"
+            element={<AnalysisPage firstFrameUrl={firstFrameUrl} />}
+          />
+          <Route
+            path="/analysis/:videoId"
             element={<AnalysisPage firstFrameUrl={firstFrameUrl} />}
           />
           <Route
