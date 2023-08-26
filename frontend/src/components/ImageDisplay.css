@@ -1,0 +1,30 @@
+/* src/components/ImageDisplay.css */
+
+.image-display {
+  position: relative;
+  max-width: 50%; /* Ensure the container doesn't exceed its parent's width */
+}
+
+/* Set a fixed height for the image display container */
+.image-display img {
+  height: auto; /* Let the height adjust based on aspect ratio */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  display: block; /* Remove any extra spacing that might affect dimensions */
+}
+
+.quadrant {
+  position: absolute;
+  width: 50%; /* 50% of the container's width */
+  height: 50%; /* 50% of the container's height */
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.quadrant:hover {
+  opacity: 0.5;
+}
+
+.quadrant.selected {
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.5);
+}

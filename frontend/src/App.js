@@ -1,113 +1,40 @@
-import React, { useState } from 'react';
-import VideoUploadComponent from './components/VideoUploadComponent';
-import VideoPreviewComponent from './components/VideoPreviewComponent';
-import GridSelectionComponent from './components/GridSelectionComponent';
-import ColorSelectionComponent from './components/ColorSelectionComponent';
-import SubmitButton from './components/SubmitButton';
-import ProcessingFeedbackComponent from './components/ProcessingFeedbackComponent';
-import DataDisplayComponent from './components/DataDisplayComponent';
-import MultipleSelectionSupport from './components/MultipleSelectionSupport';
+// src/App.js
+
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import UploadPage from "./pages/UploadPage";
+import AnalysisPage from "./pages/AnalysisPage";
+import DataDisplay from "./components/DataDisplay";
+import Header from "./components/Header"; // Import the Header component
+
+import { getFirstFrameUrl } from "./utils/mockApiUtils"; // Import the mock API function
 
 function App() {
-  const [videoURL, setVideoURL] = useState(null);
-  const [selectedCells, setSelectedCells] = useState([]);
-  const [selectedColor, setSelectedColor] = useState('red');
-  const [processing, setProcessing] = useState(false);
-  const [processedData, setProcessedData] = useState(null);
-  const [multipleSelection, setMultipleSelection] = useState(false);
-  const [videoFrame, setVideoFrame] = useState(null);
+  const [firstFrameUrl, setFirstFrameUrl] = useState(null);
 
-  // Define your component logic and event handlers here
-
-  const handleVideoUpload = (videoURL) => {
-    setVideoURL(videoURL);
-  };
-
-  const handleCellClick = (cell) => {
-    if (multipleSelection) {
-      if (selectedCells.includes(cell)) {
-        setSelectedCells(selectedCells.filter((c) => c !== cell));
-      } else {
-        setSelectedCells([...selectedCells, cell]);
-      }
-    } else {
-      setSelectedCells([cell]);
-    }
-  };
-
-  const handleSelectColor = (color) => {
-    setSelectedColor(color);
-  };
-
-  const handleProcessClick = () => {
-    setProcessing(true);
-    setProcessedData(null);
-
-    fetch('http://localhost:5000/process', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        videoURL,
-        selectedCells,
-        selectedColor,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setProcessing(false);
-        setProcessedData(data);
-        setVideoFrame(data.processed_frame_path);
-        console.log("data: ", data);
-      });
-  };
-
-  const handleToggleMultipleSelection = () => {
-    setMultipleSelection(!multipleSelection);
-  };
+  useEffect(() => {
+    // Simulate getting the URL of the first frame
+    getFirstFrameUrl("mocked-video-id").then((url) => {
+      setFirstFrameUrl(url);
+    });
+  }, []);
 
   return (
-    <div className="App">
-      <h1>Video Processing App</h1>
-
-      {/* Video upload component */}
-      <VideoUploadComponent onVideoUpload={handleVideoUpload} />
-
-      {/* Video preview component */}
-      {videoURL && <VideoPreviewComponent videoURL={videoURL} />}
-
-      {/* Grid selection component */}
-      {videoURL && (
-        <GridSelectionComponent
-          onCellClick={handleCellClick}
-          multipleSelection={multipleSelection}
-        />
-      )}
-
-      {/* Color selection component */}
-      <ColorSelectionComponent
-        selectedColor={selectedColor}
-        onSelectColor={handleSelectColor}
-      />
-
-      {/* Submit button */}
-      {videoURL && selectedCells.length > 0 && (
-        <SubmitButton onClick={handleProcessClick} />
-      )}
-
-      {/* Processing feedback component */}
-      {processing && <ProcessingFeedbackComponent />}
-
-      {/* Processed data display component */}
-      {processedData && <DataDisplayComponent data={processedData} />}
-      
-      {/* Multiple selection support */}
-      <MultipleSelectionSupport
-        onToggleMultipleSelection={handleToggleMultipleSelection}
-        multipleSelection={multipleSelection}
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/upload" element={<UploadPage />} />
+          <Route
+            path="/analysis"
+            element={<AnalysisPage firstFrameUrl={firstFrameUrl} />}
+          />
+          <Route path="/data/:videoId" element={<DataDisplay />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
