@@ -1,15 +1,10 @@
 import React from 'react';
 
 function VideoPreviewComponent({ videoURL }) {
-  // Add your component logic here
-
   return (
-    <div>
-      {/* Display the video preview */}
-      <video controls>
-        <source src={videoURL} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <div className="video-preview-component">
+      <h2>Video Preview</h2>
+      <img src={videoURL} alt="Video Preview" />
     </div>
   );
 }

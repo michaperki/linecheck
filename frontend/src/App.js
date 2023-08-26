@@ -15,6 +15,7 @@ function App() {
   const [processing, setProcessing] = useState(false);
   const [processedData, setProcessedData] = useState(null);
   const [multipleSelection, setMultipleSelection] = useState(false);
+  const [videoFrame, setVideoFrame] = useState(null);
 
   // Define your component logic and event handlers here
 
@@ -42,7 +43,7 @@ function App() {
     setProcessing(true);
     setProcessedData(null);
 
-    fetch('http://localhost:5000/process_video', {
+    fetch('http://localhost:5000/process', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -57,6 +58,8 @@ function App() {
       .then((data) => {
         setProcessing(false);
         setProcessedData(data);
+        setVideoFrame(data.processed_frame_path);
+        console.log("data: ", data);
       });
   };
 

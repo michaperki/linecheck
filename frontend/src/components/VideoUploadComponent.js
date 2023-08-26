@@ -12,15 +12,15 @@ function VideoUploadComponent({ onVideoUpload }) {
     try {
       const formData = new FormData();
       formData.append('video', videoFile);
-
+  
       const response = await fetch('http://localhost:5000/process_video', {
         method: 'POST',
         body: formData,
       });
-
+  
       if (response.ok) {
         const data = await response.json();
-        onVideoUpload(data.videoURL);
+        onVideoUpload(data.processed_frame_path); // Use the correct property from the response
       } else {
         console.error('Video upload failed.');
       }

@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/linecheck/static/js/main.887b4f74.js",
+    "index.html": "/linecheck/index.html",
+    "main.887b4f74.js.map": "/linecheck/static/js/main.887b4f74.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.887b4f74.js"
+  ]
+}
