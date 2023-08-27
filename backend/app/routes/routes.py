@@ -122,3 +122,20 @@ def submit_selection():
         return jsonify({'success': True})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
+    
+@app.route('/get_selection/<string:video_id>', methods=['GET'])
+def get_selection(video_id):
+    print("get_selection endpoint")
+    try:
+        user_submissions_folder = os.path.join(app.config['USER_SUBMISSIONS_FOLDER'], video_id)
+        print("user_submissions_folder:", user_submissions_folder)
+
+        # Read the JSON file
+        with open(os.path.join(user_submissions_folder, 'selection.json')) as f:
+            selected_quadrants = json.load(f)
+
+        return jsonify({'success': True, 'selected_quadrants': selected_quadrants})
+    
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+    

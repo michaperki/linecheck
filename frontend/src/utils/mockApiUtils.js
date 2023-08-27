@@ -96,3 +96,15 @@ export const sendGridSelection = async (videoId, selectedQuadrants) => {
     return { success: false, error: error.message };
   }
 };
+
+export const getSelectionData = async (videoId) => {
+  try {
+    const response = await fetch(`${BASE_URL}/get_selection/${videoId}`);
+    const data = await response.json();
+    console.log('Fetched selection data:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching selection data:', error);
+    return null;
+  }
+};

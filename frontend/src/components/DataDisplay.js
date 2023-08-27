@@ -1,38 +1,32 @@
-// src/components/DataDisplay.js
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { getSelectionData } from '../utils/mockApiUtils';
 
-import React, { useState, useEffect } from 'react';
-import { getAnalysisResults } from '../utils/mockApiUtils'; // Import the mock API function
-
-const DataDisplay = ({ videoId }) => {
-  const [analysisData, setAnalysisData] = useState(null);
+const DataDisplay = () => {
+  const { videoId } = useParams();
+  const [selectionData, setSelectionData] = useState(null);
 
   useEffect(() => {
-    // Fetch analysis results when the component mounts
-    fetchAnalysisResults(videoId);
-  }, [videoId]);
+    fetchSelectionData();
+  }, []);
 
-  const fetchAnalysisResults = async (videoId) => {
+  const fetchSelectionData = async () => {
     try {
-      // Simulate fetching analysis results from the API
-      const response = await getAnalysisResults(videoId);
-
-      // Set the analysis data in state
-      setAnalysisData(response);
+      const data = await getSelectionData(videoId);
+      console.log('Fetched selection data:', data); // Log the fetched data
+      setSelectionData(data);
     } catch (error) {
-      console.error('Error fetching analysis results:', error);
+      console.error('Error fetching selection data:', error); // Log any errors
     }
   };
 
   return (
-    <div className="data-display">
-      <h2>Analysis Results</h2>
-      {analysisData ? (
-        <div>
-          {/* Display the analysis data */}
-          <pre>{JSON.stringify(analysisData, null, 2)}</pre>
-        </div>
+    <div>
+      <h2>Data Viewer</h2>
+      {selectionData ? (
+        <pre>{JSON.stringify(selectionData.selected_quadrants, null, 2)}</pre>
       ) : (
-        <p>Loading analysis results...</p>
+        <p>Loading selection data...</p>
       )}
     </div>
   );
