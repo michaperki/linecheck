@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/linecheck/static/css/main.6abfb437.css",
-    "main.js": "/linecheck/static/js/main.a6f9f81d.js",
+    "main.css": "/linecheck/static/css/main.e52711a0.css",
+    "main.js": "/linecheck/static/js/main.a69fc408.js",
     "index.html": "/linecheck/index.html",
-    "main.6abfb437.css.map": "/linecheck/static/css/main.6abfb437.css.map",
-    "main.a6f9f81d.js.map": "/linecheck/static/js/main.a6f9f81d.js.map"
+    "main.e52711a0.css.map": "/linecheck/static/css/main.e52711a0.css.map",
+    "main.a69fc408.js.map": "/linecheck/static/js/main.a69fc408.js.map"
   },
   "entrypoints": [
-    "static/css/main.6abfb437.css",
-    "static/js/main.a6f9f81d.js"
+    "static/css/main.e52711a0.css",
+    "static/js/main.a69fc408.js"
   ]
 }
