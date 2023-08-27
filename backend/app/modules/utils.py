@@ -5,37 +5,49 @@ def calculate_cropping_region(selected_squares, grid_size, image_dimensions):
     print("image_dimensions:", image_dimensions)
     
     img_width, img_height = image_dimensions
-    cell_height = 1 / grid_size[0]
-    cell_width = 1 / grid_size[1]
+    cell_height = img_height / grid_size[0]
+    cell_width = img_width / grid_size[1]
     
+    # Get the coordinates of the first selected square
+    # each square is an index in the grid.
+    # we need to convert the index to a coordinate
+    # in the image.
     
-    print("img_width:", img_width)
+    # For each square, convert the index to a coordinate
+    # Find the minimum and maximum x and y coordinates
+    # Return the cropping region
+    left = 0
+    upper = 0
+    right = 0
+    lower = 0
     
-    cols = []
-    rows = []
-    
-    for square in selected_squares:
-        row = square // grid_size[0]
-        col = square % grid_size[0]
+    for square_index in selected_squares:
+        print("square_index:", square_index)
+        # Convert the square index to a coordinate
+        square_x = square_index % grid_size[1]
+        square_y = square_index // grid_size[1]
+        print("square_x:", square_x)
+        print("square_y:", square_y)
+
         
-        cols.append(col)
-        rows.append(row)
-
-    
-    min_col = min(cols)
-    max_col = max(cols)
-    min_row = min(rows)
-    max_row = max(rows)
-    
-    left = int(min_col * cell_width * img_width)
-    right = int((max_col + 1) * cell_width * img_width)
-    top = int(min_row * cell_height * img_height)
-    bottom = int((max_row + 1) * cell_height * img_height)
-    
-    print("left:", left)
-    print("right:", right)
-    print("top:", top)
-    print("bottom:", bottom)
-    
-    return (left, top, right, bottom)
-
+        # Convert the square coordinate to a cropping region
+        square_left = square_x * cell_width
+        square_upper = square_y * cell_height
+        square_right = square_left + cell_width
+        square_lower = square_upper + cell_height
+        print("square_left:", square_left)
+        print("square_upper:", square_upper)
+        print("square_right:", square_right)
+        print("square_lower:", square_lower)
+        
+        # Update the cropping region
+        if left == 0 or square_left < left:
+            left = square_left
+        if upper == 0 or square_upper < upper:
+            upper = square_upper
+        if right == 0 or square_right > right:
+            right = square_right
+        if lower == 0 or square_lower > lower:
+            lower = square_lower
+            
+    return (left, upper, right, lower)

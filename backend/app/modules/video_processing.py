@@ -49,9 +49,13 @@ def crop_frames(video_id, selected_squares):
     # Load frames for the video
     frames = load_frames(video_id)
     print("frames loaded")
+    
+    # get the dimensions of the first frame
+    frame = frames[0]
+    frame_pil = Image.fromarray(frame)
 
     cropped_frames = []
-    cropping_region = calculate_cropping_region(selected_squares, app.config['GRID_SIZE'], app.config['FRAME_SIZE'])
+    cropping_region = calculate_cropping_region(selected_squares, app.config['GRID_SIZE'], frame_pil.size)
     print("cropping_region:", cropping_region)
     left, upper, right, lower = cropping_region
     

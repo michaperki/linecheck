@@ -28,6 +28,10 @@
   border: 1px solid black;
 }
 
+.grid-square:hover {
+  background-color: #e6e6e6;
+}
+
 .grid-square.selected {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
 }

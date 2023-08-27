@@ -6,5 +6,5 @@ class Config:
     VIDEOS_FOLDER = 'uploaded_videos/videos'
     USER_SUBMISSIONS_FOLDER = 'user_submissions'
     CROPPED_FRAMES_FOLDER = 'cropped_frames'
-    FRAME_SIZE = (300, 600)
+    FRAME_SIZE = (600, 330)
     GRID_SIZE = (30, 30)
