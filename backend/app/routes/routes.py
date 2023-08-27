@@ -6,8 +6,7 @@ import cv2
 import uuid
 from app import app
 
-from app.modules import ocr_processing, image_processing, video_processing, utils
-from app.modules.database import store_selected_squares_in_database, get_selected_squares_from_database
+from app.modules import ocr_processing, image_processing, video_processing, utils, database
 
 
 @app.route('/process_video/<string:video_id>', methods=['POST'])
@@ -95,7 +94,7 @@ def submit_selection():
         print("video_id:", video_id)
         
         # Store the selected grid coordinates for the video
-        store_selected_squares_in_database(video_id, selected_squares)
+        database.store_selected_squares_in_database(video_id, selected_squares)
         print("stored selected squares in database")
         
         # Get the processed frame paths for the video
@@ -115,6 +114,9 @@ def submit_selection():
         # Perform OCR analysis on cropped frames and store OCR results
         ocr_results = ocr_processing.perform_ocr(cropped_frames, video_id)
         
+        # Store OCR results in the database
+        database.store_ocr_results_in_database(video_id, ocr_results)
+
         return jsonify({'success': True, 'ocr_results': ocr_results})
 
     except Exception as e:
@@ -143,11 +145,20 @@ def fetch_selected_frames(video_id):
         frames = video_processing.fetch_selected_frames(video_id)
 
         # Get the selected grid coordinates for the video
-        selected_squares = get_selected_squares_from_database(video_id)
+        selected_squares = database.get_selected_squares_from_database(video_id)
 
         # Crop frames based on selected grid coordinates
         cropped_frames = video_processing.crop_frames(frames, selected_squares)
 
         return jsonify({'frames': cropped_frames})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})
+    
+@app.route('/get_ocr_results/<string:video_id>', methods=['GET'])
+def get_ocr_results(video_id):
+    try:
+        # Retrieve OCR results for the given video_id
+        ocr_results = ocr_processing.get_ocr_results(video_id)
+        return jsonify({'success': True, 'ocr_results': ocr_results})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
