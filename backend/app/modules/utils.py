@@ -22,23 +22,15 @@ def calculate_cropping_region(selected_squares, grid_size, image_dimensions):
     lower = 0
     
     for square_index in selected_squares:
-        print("square_index:", square_index)
         # Convert the square index to a coordinate
         square_x = square_index % grid_size[1]
         square_y = square_index // grid_size[1]
-        print("square_x:", square_x)
-        print("square_y:", square_y)
-
         
         # Convert the square coordinate to a cropping region
         square_left = square_x * cell_width
         square_upper = square_y * cell_height
         square_right = square_left + cell_width
         square_lower = square_upper + cell_height
-        print("square_left:", square_left)
-        print("square_upper:", square_upper)
-        print("square_right:", square_right)
-        print("square_lower:", square_lower)
         
         # Update the cropping region
         if left == 0 or square_left < left:
@@ -49,5 +41,12 @@ def calculate_cropping_region(selected_squares, grid_size, image_dimensions):
             right = square_right
         if lower == 0 or square_lower > lower:
             lower = square_lower
+            
+        # Add a 5px buffer to the cropping region
+        buffer = 5
+        left -= buffer
+        upper -= buffer
+        right += buffer
+        lower += buffer
             
     return (left, upper, right, lower)

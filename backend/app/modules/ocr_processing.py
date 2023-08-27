@@ -19,5 +19,7 @@ def perform_ocr(cropped_frames, video_id):
             'frame_index': frame_index,
             'ocr_text': ocr_text
         })
+        
+    print("ocr_results:", ocr_results)
 
     return ocr_results

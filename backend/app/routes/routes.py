@@ -10,37 +10,25 @@ from app.modules import ocr_processing, image_processing, video_processing, util
 from app.modules.database import store_selected_squares_in_database, get_selected_squares_from_database
 
 
-@app.route('/process_video', methods=['POST'])
-def process_video_route():
+@app.route('/process_video/<string:video_id>', methods=['POST'])
+def process_video_route(video_id):
     try:
-        video = request.files['video']
-        video_path = os.path.join(app.config['UPLOAD_FOLDER'], video.filename)
-        video.save(video_path)
+        # Construct the video_path using the uploaded video_id
+        video_path = os.path.join(app.config["UPLOAD_FOLDER"], "videos", f"{video_id}.mp4")
 
-        # Process the video and get the processed frame path
-        processed_frame_path = video_processing.process_video(video_path)
+        processed_frame_paths = video_processing.process_video(video_path)
 
-        # Create a sub-folder in PROCESSED_FOLDER using video title as the folder name
-        video_title = os.path.splitext(video.filename)[0]
+        video_title = os.path.splitext(os.path.basename(video_path))[0]
         video_processed_folder = os.path.join(app.config['PROCESSED_FOLDER'], video_title)
         os.makedirs(video_processed_folder, exist_ok=True)
 
-        # Move the processed frame to the video-specific processed folder
-        processed_frame_dest = os.path.join(video_processed_folder, os.path.basename(processed_frame_path))
-        os.rename(processed_frame_path, processed_frame_dest)
+        for frame_path in processed_frame_paths:
+            processed_frame_dest = os.path.join(video_processed_folder, os.path.basename(frame_path))
+            os.rename(frame_path, processed_frame_dest)
 
-        # Move the original video to the video-specific processed folder
-        video_dest = os.path.join(video_processed_folder, video.filename)
-        os.rename(video_path, video_dest)
-
-        return jsonify({'success': True, 'processed_frame_path': processed_frame_dest})
+        return {'success': True, 'processed_frame_paths': processed_frame_paths}
     except Exception as e:
-        return jsonify({'success': False, 'error': str(e)})
-    
-@app.route('/processed_videos/<path:filename>')
-def processed_videos(filename):
-    return send_from_directory(app.config['PROCESSED_FOLDER'], filename)
-
+        return {'success': False, 'error': str(e)}
 
 # new routes below
 
@@ -87,9 +75,14 @@ def upload_video():
     
     # Save the first frame
     cv2.imwrite(frame_path, frame)
+
+    # Call the process_video_route to process the uploaded video
+    process_response = process_video_route(video_id)
     
-    # Return a response indicating success and the generated video ID
-    return {"success": True, "video_id": video_id, "frame_path": frame_path}
+    if process_response['success']:
+        return {"success": True, "video_id": video_id, "frame_path": frame_path, "processed_frame_paths": process_response['processed_frame_paths']}
+    else:
+        return {"success": False, "error": "Video upload and processing failed"}
 
 @app.route('/submit_selection', methods=['POST'])
 def submit_selection():
@@ -105,15 +98,25 @@ def submit_selection():
         store_selected_squares_in_database(video_id, selected_squares)
         print("stored selected squares in database")
         
-        # Crop frames based on selected squares and save cropped images
-        cropped_frames = video_processing.crop_frames(video_id, selected_squares)
-        print("cropped_frames:", cropped_frames)
+        # Get the processed frame paths for the video
+        processed_frame_paths = video_processing.process_video(video_id)
+        
+        # Load the processed frames
+        frames = video_processing.load_processed_frames(processed_frame_paths)
+        
+        # Crop frames based on selected grid coordinates
+        cropped_frames = video_processing.crop_frames(frames, selected_squares)
+        
+        # Save the cropped frames
+        video_processing.save_cropped_frames(cropped_frames, video_id)
+        
+        print("cropping done")
 
         # Perform OCR analysis on cropped frames and store OCR results
         ocr_results = ocr_processing.perform_ocr(cropped_frames, video_id)
-        print("ocr_results:", ocr_results)
+        
+        return jsonify({'success': True, 'ocr_results': ocr_results})
 
-        return jsonify({'success': True})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
 
@@ -137,7 +140,7 @@ def get_selection(video_id):
 @app.route('/fetch_selected_frames/<video_id>', methods=['GET'])
 def fetch_selected_frames(video_id):
     try:
-        frames = video_processing.fetch_video_frames(video_id)
+        frames = video_processing.fetch_selected_frames(video_id)
 
         # Get the selected grid coordinates for the video
         selected_squares = get_selected_squares_from_database(video_id)

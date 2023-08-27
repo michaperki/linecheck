@@ -7,30 +7,37 @@ from app.modules.utils import calculate_cropping_region
 from PIL import Image
 
 
-def process_video(video_path):
-    # Break the video into frames (one frame every 100 frames) and save to a subdirectory of the app.config['PROCESSED_FOLDER']
-    # Return the path of the first frame
+def process_video(video_id):
+    print("process_video")
+    print("video_id:", video_id)
     
+    # Define the path to the uploaded video
+    video_path = os.path.join(app.config["UPLOAD_FOLDER"], "videos", f"{video_id}.mp4")
+
     # Create a sub-folder in PROCESSED_FOLDER using video title as the folder name
-    video_title = os.path.splitext(os.path.basename(video_path))[0]
+    video_title = video_id  # Use video_id as the video title
     video_processed_folder = os.path.join(app.config['PROCESSED_FOLDER'], video_title)
     os.makedirs(video_processed_folder, exist_ok=True)
-    
-    # Open the video
+    print("video_processed_folder:", video_processed_folder)
+
     video = cv2.VideoCapture(video_path)
-    
-    # Get the first frame
-    success, image = video.read()
-    count = 0
-    while success:
-        if count % 100 == 0:
-            # Save the frame as a jpg file
-            cv2.imwrite(os.path.join(video_processed_folder, f'{count}.jpg'), image)
-        success, image = video.read()
-        count += 1
-        
-    # Return the path of the first frame
-    return os.path.join(video_processed_folder, '0.jpg')
+
+    processed_frame_paths = []  # List to hold processed frame paths
+
+    frame_index = 0
+    while True:
+        success, frame = video.read()
+        if not success:
+            break
+
+        frame_path = os.path.join(video_processed_folder, f"{frame_index}.jpg")
+        cv2.imwrite(frame_path, frame)
+
+        processed_frame_paths.append(frame_path)  # Add frame path to the list
+
+        frame_index += 1
+
+    return processed_frame_paths
 
 def fetch_selected_frames(video_id):
     frames_folder = os.path.join(app.config['FRAMES_FOLDER'], video_id)
@@ -44,39 +51,30 @@ def fetch_selected_frames(video_id):
 
     return selected_frames
 
-def crop_frames(video_id, selected_squares):
+def crop_frames(frames, selected_squares):
     print("crop_frames")
-    # Load frames for the video
-    frames = load_frames(video_id)
-    print("frames loaded")
+    print(frames)
+    # Get the dimensions of the first frame
+    frame_width, frame_height = frames[0].size
     
-    # get the dimensions of the first frame
-    frame = frames[0]
-    frame_pil = Image.fromarray(frame)
-
-    cropped_frames = []
-    cropping_region = calculate_cropping_region(selected_squares, app.config['GRID_SIZE'], frame_pil.size)
+    # Get the grid size
+    grid_size = app.config['GRID_SIZE']
+    
+    print("frame_width:", frame_width)
+    
+    # Calculate the cropping region
+    cropping_region = calculate_cropping_region(selected_squares, grid_size, (frame_width, frame_height))
+    
     print("cropping_region:", cropping_region)
-    left, upper, right, lower = cropping_region
     
-    for frame_index, frame in enumerate(frames):
-        # Convert the NumPy array to a Pillow Image
-        frame_pil = Image.fromarray(frame)
-
-        # Print the shape of the frame
-        print("Frame shape:", frame_pil.size)
-
-        # Crop the frame
-        print("frame #:", frame_index)
-        cropped_frame = frame_pil.crop((left, upper, right, lower))
-        print("cropped_frame:", cropped_frame)
+    # Crop each frame
+    cropped_frames = []
+    for frame in frames:
+        cropped_frame = image_processing.crop_image(frame, cropping_region)
         cropped_frames.append(cropped_frame)
+        
+    return cropped_frames  
 
-        # Save the cropped frame
-        save_cropped_frame(cropped_frame, video_id, frame_index, 0)
-        print("cropped frame saved")
-    
-    return cropped_frames
 
 def save_cropped_frame(cropped_frame, video_id, frame_index, square_index):
     print("save_cropped_frame")
@@ -100,3 +98,20 @@ def load_frames(video_id):
         frames.append(frame)
 
     return frames
+
+def load_processed_frames(processed_frame_paths):
+    print("load_processed_frames")
+    print("processed_frame_paths:", processed_frame_paths)
+    frames = []
+    for frame_path in processed_frame_paths:
+        frame = image_processing.load_image(frame_path)
+        frames.append(frame)
+    return frames
+
+def save_cropped_frames(cropped_frames, video_id):
+    for frame_index, cropped_frame in enumerate(cropped_frames):
+        save_cropped_frame(cropped_frame, video_id, frame_index, 0)
+        
+def load_video(video_id):
+    video_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{video_id}.mp4")
+    return cv2.VideoCapture(video_path)
