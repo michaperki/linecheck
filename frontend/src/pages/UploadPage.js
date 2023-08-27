@@ -3,11 +3,11 @@
 import React from 'react';
 import VideoUploader from '../components/VideoUploader';
 
-const UploadPage = () => {
+const UploadPage = ({setVideoId}) => {
   return (
     <div>
       <h1>Upload Page</h1>
-      <VideoUploader />
+      <VideoUploader setVideoId={setVideoId}/>
     </div>
   );
 };

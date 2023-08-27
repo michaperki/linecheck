@@ -1,10 +1,10 @@
 // src/components/VideoUploader.js
 
-import React, { useState } from 'react';
-import { uploadVideo } from '../utils/mockApiUtils'; // Replace with actual API utils
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { uploadVideo } from "../utils/mockApiUtils"; // Replace with actual API utils
+import { useNavigate } from "react-router-dom";
 
-const VideoUploader = () => {
+const VideoUploader = ({ setVideoId }) => {
   const navigate = useNavigate();
 
   const [selectedFile, setSelectedFile] = useState(null);
@@ -19,16 +19,16 @@ const VideoUploader = () => {
       setUploading(true);
 
       try {
-        const response = await uploadVideo(selectedFile); // Replace with actual API call
-        console.log('Video uploaded:', response);
+        const response = await uploadVideo(selectedFile);
+
         if (response.videoId) {
+          setVideoId(response.videoId); // Update the videoId state
           navigate(`/analysis/${response.videoId}`);
         }
 
-        // Reset the form after successful upload
         setSelectedFile(null);
       } catch (error) {
-        console.error('Error uploading video:', error);
+        console.error("Error uploading video:", error);
       } finally {
         setUploading(false);
       }
@@ -40,7 +40,7 @@ const VideoUploader = () => {
       <h2>Upload Your Video</h2>
       <input type="file" accept="video/*" onChange={handleFileChange} />
       <button onClick={handleUpload} disabled={uploading || !selectedFile}>
-        {uploading ? 'Uploading...' : 'Upload Video'}
+        {uploading ? "Uploading..." : "Upload Video"}
       </button>
     </div>
   );

@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 import ImageDisplay from './ImageDisplay';
-import { sendGridSelection } from '../utils/mockApiUtils';
 
-const RegionSelector = ({ firstFrameUrl }) => {
+const RegionSelector = ({ firstFrameUrl, handleGridSelection }) => {
   const [selectedQuadrant, setSelectedQuadrant] = useState(null);
 
   const handleQuadrantClick = (quadrantIndex) => {
     setSelectedQuadrant(quadrantIndex);
   };
 
-  const handleSubmit = async () => {
-    // Send the selected quadrant to the backend
-    const response = await sendGridSelection(selectedQuadrant);
-    if (response.success) {
-      alert('Selection submitted successfully!');
+  const handleSubmit = () => {
+    // Call the handleGridSelection function from props to send grid selection
+    if (selectedQuadrant !== null) {
+      handleGridSelection(selectedQuadrant);
+    } else {
+      alert('Please select a quadrant.');
     }
   };
 

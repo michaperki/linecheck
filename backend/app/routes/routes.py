@@ -1,5 +1,6 @@
 # app/routes/routes.py
 from flask import Blueprint, request, send_from_directory, jsonify
+import json
 import os
 import cv2
 import uuid
@@ -87,16 +88,37 @@ def upload_video():
     # Return a response indicating success and the generated video ID
     return {"success": True, "video_id": video_id, "frame_path": frame_path}
 
-@app.route("/submit_selection", methods=["POST"])
+@app.route('/submit_selection', methods=['POST'])
 def submit_selection():
     try:
         data = request.json  # Get JSON data from the request body
-        selected_quadrants = data.get("selectedQuadrants", [])
+        print("data:", data)
+        selected_quadrants = data.get('selectedQuadrants', [])
+        print("selected_quadrants:", selected_quadrants)
 
-        # Process the selected quadrants here
-        # You can perform any necessary backend operations using the selected data
+        # Get the video ID from the data
+        video_id = data.get('videoId')
+        print("video_id:", video_id)
 
-        # For demonstration purposes, you can return a success response
-        return jsonify({"success": True})
+        user_submissions_folder = os.path.join(app.config['USER_SUBMISSIONS_FOLDER'], video_id)
+        
+                # Inside the submit_selection function
+        print("video_id:", video_id)
+        print("user_submissions_folder:", user_submissions_folder)
+
+        # Before writing to the file
+        print("selected_quadrants:", selected_quadrants)
+        
+        
+        os.makedirs(user_submissions_folder, exist_ok=True)
+
+        # Write the selected quadrants to a JSON file
+        output_file_path = os.path.join(user_submissions_folder, 'selection.json')
+        print("output_file_path:", output_file_path)
+
+        with open(output_file_path, 'w') as f:
+            json.dump(selected_quadrants, f)
+
+        return jsonify({'success': True})
     except Exception as e:
-        return jsonify({"success": False, "error": str(e)})
+        return jsonify({'success': False, 'error': str(e)})

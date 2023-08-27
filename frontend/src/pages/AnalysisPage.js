@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom"; // Import useParams
+import { useParams } from "react-router-dom";
 import RegionSelector from "../components/RegionSelector";
 import ImageDisplay from "../components/ImageDisplay";
-import { getFirstFrameUrl } from "../utils/mockApiUtils"; // Import the updated mock API function
+import { getFirstFrameUrl } from "../utils/mockApiUtils";
 
-const AnalysisPage = () => {
-  const { videoId } = useParams(); // Get the videoId from URL parameters
-  const [firstFrameUrl, setFirstFrameUrl] = useState(null);
+function AnalysisPage({ handleGridSelection }) {
+  const { videoId } = useParams();
+  const [firstFrameUrl, setFirstFrameUrl] = useState(null); // Declare firstFrameUrl state
 
   useEffect(() => {
-    // Fetch the first frame URL when the component mounts
     fetchFirstFrameUrl();
-  }, [videoId]); // Fetch the first frame URL whenever the videoId changes
+  }, [videoId]);
 
   const fetchFirstFrameUrl = async () => {
     try {
-      // Simulate fetching the first frame URL from the API
       const response = await getFirstFrameUrl(videoId);
-
-      // Set the first frame URL in state
-      setFirstFrameUrl(response);
+      setFirstFrameUrl(response); // Update the firstFrameUrl state
     } catch (error) {
       console.error("Error fetching first frame URL:", error);
     }
@@ -28,10 +24,12 @@ const AnalysisPage = () => {
   return (
     <div>
       <h1>Analysis Page</h1>
-      {/* Pass the firstFrameUrl to RegionSelector */}
-      <RegionSelector firstFrameUrl={firstFrameUrl} />
+      <RegionSelector
+        firstFrameUrl={firstFrameUrl}
+        handleGridSelection={handleGridSelection}
+      />
     </div>
   );
-};
+}
 
 export default AnalysisPage;
