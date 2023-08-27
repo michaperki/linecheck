@@ -5,7 +5,10 @@ import os
 import cv2
 import uuid
 from app import app
-from app.modules.video_processing import process_video
+
+from app.modules import ocr_processing, image_processing, video_processing, utils
+from app.modules.database import store_selected_squares_in_database, get_selected_squares_from_database
+
 
 @app.route('/process_video', methods=['POST'])
 def process_video_route():
@@ -15,7 +18,7 @@ def process_video_route():
         video.save(video_path)
 
         # Process the video and get the processed frame path
-        processed_frame_path = process_video(video_path)
+        processed_frame_path = video_processing.process_video(video_path)
 
         # Create a sub-folder in PROCESSED_FOLDER using video title as the folder name
         video_title = os.path.splitext(video.filename)[0]
@@ -91,37 +94,29 @@ def upload_video():
 @app.route('/submit_selection', methods=['POST'])
 def submit_selection():
     try:
-        data = request.json  # Get JSON data from the request body
-        print("data:", data)
-        selected_quadrants = data.get('selectedQuadrants', [])
-        print("selected_quadrants:", selected_quadrants)
-
-        # Get the video ID from the data
-        video_id = data.get('videoId')
+        data = request.json
+        selected_squares = data.get('selectedSquares', [])
+        video_id = data.get('videoId', None)
+        print("submit_selection endpoint")
+        print("selected_squares:", selected_squares)
         print("video_id:", video_id)
-
-        user_submissions_folder = os.path.join(app.config['USER_SUBMISSIONS_FOLDER'], video_id)
         
-                # Inside the submit_selection function
-        print("video_id:", video_id)
-        print("user_submissions_folder:", user_submissions_folder)
-
-        # Before writing to the file
-        print("selected_quadrants:", selected_quadrants)
+        # Store the selected grid coordinates for the video
+        store_selected_squares_in_database(video_id, selected_squares)
+        print("stored selected squares in database")
         
-        
-        os.makedirs(user_submissions_folder, exist_ok=True)
+        # Crop frames based on selected squares and save cropped images
+        cropped_frames = video_processing.crop_frames(video_id, selected_squares)
+        print("cropped_frames:", cropped_frames)
 
-        # Write the selected quadrants to a JSON file
-        output_file_path = os.path.join(user_submissions_folder, 'selection.json')
-        print("output_file_path:", output_file_path)
-
-        with open(output_file_path, 'w') as f:
-            json.dump(selected_quadrants, f)
+        # Perform OCR analysis on cropped frames and store OCR results
+        ocr_results = ocr_processing.perform_ocr(cropped_frames, video_id)
+        print("ocr_results:", ocr_results)
 
         return jsonify({'success': True})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
+
     
 @app.route('/get_selection/<string:video_id>', methods=['GET'])
 def get_selection(video_id):
@@ -132,10 +127,24 @@ def get_selection(video_id):
 
         # Read the JSON file
         with open(os.path.join(user_submissions_folder, 'selection.json')) as f:
-            selected_quadrants = json.load(f)
+            selected_squares = json.load(f)
 
-        return jsonify({'success': True, 'selected_quadrants': selected_quadrants})
+        return jsonify({'success': True, 'selected_squares': selected_squares})
     
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
     
+@app.route('/fetch_selected_frames/<video_id>', methods=['GET'])
+def fetch_selected_frames(video_id):
+    try:
+        frames = video_processing.fetch_video_frames(video_id)
+
+        # Get the selected grid coordinates for the video
+        selected_squares = get_selected_squares_from_database(video_id)
+
+        # Crop frames based on selected grid coordinates
+        cropped_frames = video_processing.crop_frames(frames, selected_squares)
+
+        return jsonify({'frames': cropped_frames})
+    except Exception as e:
+        return jsonify({'success': False, 'error': str(e)})

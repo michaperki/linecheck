@@ -72,7 +72,7 @@ export const getFirstFrameUrl = async (videoId) => {
 };
 
 // Mock function to simulate sending grid selection to the backend
-export const sendGridSelection = async (videoId, selectedQuadrants) => {
+export const sendGridSelection = async (videoId, selectedSquares) => {
   // Simulate a delay
   await new Promise((resolve) => setTimeout(resolve, 1000));
 
@@ -82,7 +82,7 @@ export const sendGridSelection = async (videoId, selectedQuadrants) => {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ videoId, selectedQuadrants }), // Include videoId in the JSON payload
+      body: JSON.stringify({ videoId, selectedSquares }), // Include videoId in the JSON payload
     });
 
     if (!response.ok) {
