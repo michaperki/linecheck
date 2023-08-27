@@ -108,3 +108,15 @@ export const getSelectionData = async (videoId) => {
     return null;
   }
 };
+
+export const getOcrResults = async (videoId) => {
+  try {
+    const response = await fetch(`${BASE_URL}/data/${videoId}`);
+    const data = await response.json();
+    console.log('Fetched OCR results:', data);
+    return data;
+  } catch (error) {
+    console.error('Error fetching OCR results:', error);
+    return null;
+  }
+}

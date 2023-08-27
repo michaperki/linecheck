@@ -1,8 +1,15 @@
 // RegionSelector.js
 import React, { useState } from 'react';
 import ImageDisplay from './ImageDisplay';
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 
 const RegionSelector = ({ firstFrameUrl, handleGridSelection }) => {
+  const navigate = useNavigate();
+
+  const { videoId } = useParams();
+
   const [selectedSquares, setSelectedSquares] = useState([]);
 
   const clearSelectedSquares = () => {
@@ -20,6 +27,7 @@ const RegionSelector = ({ firstFrameUrl, handleGridSelection }) => {
   const handleSubmit = () => {
     if (selectedSquares.length > 0) {
       handleGridSelection(selectedSquares);
+      navigate(`/data/${videoId}`);
     } else {
       alert('Please select at least one square.');
     }

@@ -154,11 +154,11 @@ def fetch_selected_frames(video_id):
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})
     
-@app.route('/get_ocr_results/<string:video_id>', methods=['GET'])
+@app.route('/data/<string:video_id>', methods=['GET'])
 def get_ocr_results(video_id):
     try:
         # Retrieve OCR results for the given video_id
-        ocr_results = ocr_processing.get_ocr_results(video_id)
+        ocr_results = database.get_ocr_results_from_database(video_id)
         return jsonify({'success': True, 'ocr_results': ocr_results})
     except Exception as e:
         return jsonify({'success': False, 'error': str(e)})

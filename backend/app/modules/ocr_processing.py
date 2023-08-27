@@ -23,10 +23,3 @@ def perform_ocr(cropped_frames, video_id):
     print("ocr_results:", ocr_results)
 
     return ocr_results
-
-def get_ocr_results(video_id):
-    # Implement logic to retrieve OCR results from the database or files
-    # Return the OCR results for the given video_id
-    # Example: ocr_results = get_results_from_database(video_id)
-    ocr_results = {}  # Replace with actual OCR results
-    return ocr_results

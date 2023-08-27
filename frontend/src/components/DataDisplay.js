@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getSelectionData } from '../utils/mockApiUtils';
+import { getOcrResults } from '../utils/mockApiUtils'; // Update with actual API function
 
 const DataDisplay = () => {
   const { videoId } = useParams();
-  const [selectionData, setSelectionData] = useState(null);
+  const [ocrResults, setOcrResults] = useState(null);
 
   useEffect(() => {
-    fetchSelectionData();
+    fetchOcrResults();
   }, []);
 
-  const fetchSelectionData = async () => {
+  const fetchOcrResults = async () => {
     try {
-      const data = await getSelectionData(videoId);
-      console.log('Fetched selection data:', data); // Log the fetched data
-      setSelectionData(data);
+      const results = await getOcrResults(videoId);
+      console.log('Fetched OCR results:', results);
+      setOcrResults(results);
     } catch (error) {
-      console.error('Error fetching selection data:', error); // Log any errors
+      console.error('Error fetching OCR results:', error);
     }
   };
 
   return (
     <div>
       <h2>Data Viewer</h2>
-      {selectionData ? (
-        <pre>{JSON.stringify(selectionData.selected_quadrants, null, 2)}</pre>
+      <h3>OCR Results</h3>
+      {ocrResults ? (
+        <pre>{JSON.stringify(ocrResults, null, 2)}</pre>
       ) : (
-        <p>Loading selection data...</p>
+        <p>Loading OCR results...</p>
       )}
     </div>
   );
