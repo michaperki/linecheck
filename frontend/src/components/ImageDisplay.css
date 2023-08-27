@@ -1,30 +1,33 @@
-/* src/components/ImageDisplay.css */
-
 .image-display {
   position: relative;
-  max-width: 50%; /* Ensure the container doesn't exceed its parent's width */
 }
 
-/* Set a fixed height for the image display container */
-.image-display img {
-  height: auto; /* Let the height adjust based on aspect ratio */
-  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
-  display: block; /* Remove any extra spacing that might affect dimensions */
+.img {
+  width: 600px;
 }
 
-.quadrant {
+.grid-container {
   position: absolute;
-  width: 50%; /* 50% of the container's width */
-  height: 50%; /* 50% of the container's height */
-  opacity: 0.3;
-  transition: opacity 0.2s;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.quadrant:hover {
-  opacity: 0.5;
+.grid-row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
-.quadrant.selected {
-  opacity: 0.8;
+.grid-square {
+  width: 20px;
+  flex: 1;
+  border: 1px solid black;
+}
+
+.grid-square.selected {
   background-color: rgba(0, 0, 0, 0.5);
 }

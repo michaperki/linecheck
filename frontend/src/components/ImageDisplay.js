@@ -1,32 +1,37 @@
+// ImageDisplay.js
 import React from 'react';
 import './ImageDisplay.css';
 
-const ImageDisplay = ({ firstFrameUrl, selectedQuadrant, onQuadrantClick }) => {
-  const quadrantStyles = [
-    { top: 0, left: 0 },
-    { top: 0, right: 0 },
-    { bottom: 0, left: 0 },
-    { bottom: 0, right: 0 },
-  ];
+const ImageDisplay = ({ firstFrameUrl, selectedSquares, onSquareClick }) => {
+  const numRows = 30;
+  const numCols = 30;
 
-  const handleQuadrantClick = (quadrantIndex) => {
-    onQuadrantClick(quadrantIndex);
+  const handleSquareClick = (row, col) => {
+    const squareIndex = row * numCols + col;
+    onSquareClick(squareIndex);
   };
 
   return (
     <div className="image-display">
-      {quadrantStyles.map((style, index) => (
-        <div
-          key={index}
-          className={`quadrant ${selectedQuadrant === index ? 'selected' : ''}`}
-          style={style}
-          onClick={() => handleQuadrantClick(index)}
-        />
-      ))}
+      <div className="grid-container">
+        {Array.from({ length: numRows }).map((_, rowIndex) => (
+          <div key={rowIndex} className="grid-row">
+            {Array.from({ length: numCols }).map((_, colIndex) => (
+              <div
+                key={colIndex}
+                className={`grid-square ${selectedSquares.includes(
+                  rowIndex * numCols + colIndex
+                ) ? 'selected' : ''}`}
+                onClick={() => handleSquareClick(rowIndex, colIndex)}
+              />
+            ))}
+          </div>
+        ))}
+      </div>
       <img
         src={firstFrameUrl}
         alt="First Frame"
-        style={{ maxHeight: '100%', maxWidth: '100%' }}
+        className="img"
       />
     </div>
   );

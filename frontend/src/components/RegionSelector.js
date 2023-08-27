@@ -1,19 +1,27 @@
+// RegionSelector.js
 import React, { useState } from 'react';
 import ImageDisplay from './ImageDisplay';
 
 const RegionSelector = ({ firstFrameUrl, handleGridSelection }) => {
-  const [selectedQuadrant, setSelectedQuadrant] = useState(null);
+  const [selectedSquares, setSelectedSquares] = useState([]);
 
-  const handleQuadrantClick = (quadrantIndex) => {
-    setSelectedQuadrant(quadrantIndex);
+  const clearSelectedSquares = () => {
+    setSelectedSquares([]);
+  };
+
+  const handleSquareClick = (squareIndex) => {
+    if (selectedSquares.includes(squareIndex)) {
+      setSelectedSquares(selectedSquares.filter(index => index !== squareIndex));
+    } else {
+      setSelectedSquares([...selectedSquares, squareIndex]);
+    }
   };
 
   const handleSubmit = () => {
-    // Call the handleGridSelection function from props to send grid selection
-    if (selectedQuadrant !== null) {
-      handleGridSelection(selectedQuadrant);
+    if (selectedSquares.length > 0) {
+      handleGridSelection(selectedSquares);
     } else {
-      alert('Please select a quadrant.');
+      alert('Please select at least one square.');
     }
   };
 
@@ -22,12 +30,20 @@ const RegionSelector = ({ firstFrameUrl, handleGridSelection }) => {
       <h3>Select Regions</h3>
       <ImageDisplay
         firstFrameUrl={firstFrameUrl}
-        selectedQuadrant={selectedQuadrant}
-        onQuadrantClick={handleQuadrantClick}
+        selectedSquares={selectedSquares}
+        onSquareClick={handleSquareClick}
       />
       <button
+        className="clear-button"
+        disabled={selectedSquares.length === 0}
+        onClick={clearSelectedSquares}
+      >
+        Clear
+      </button>
+      <br />
+      <button
         className="submit-button"
-        disabled={selectedQuadrant === null}
+        disabled={selectedSquares.length === 0}
         onClick={handleSubmit}
       >
         Submit
