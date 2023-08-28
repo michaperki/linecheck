@@ -23,12 +23,12 @@
 }
 
 .grid-square {
-  width: 20px;
+  width: 10px;
   flex: 1;
-  border: 1px solid black;
 }
 
 .grid-square:hover {
+  
   background-color: #e6e6e6;
 }
 

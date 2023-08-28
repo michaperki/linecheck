@@ -3,8 +3,8 @@ import React from 'react';
 import './ImageDisplay.css';
 
 const ImageDisplay = ({ firstFrameUrl, selectedSquares, onSquareClick }) => {
-  const numRows = 30;
-  const numCols = 30;
+  const numRows = 60;
+  const numCols = 60;
 
   const handleSquareClick = (row, col) => {
     const squareIndex = row * numCols + col;

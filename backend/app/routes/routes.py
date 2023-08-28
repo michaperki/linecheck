@@ -113,9 +113,13 @@ def submit_selection():
 
         # Perform OCR analysis on cropped frames and store OCR results
         ocr_results = ocr_processing.perform_ocr(cropped_frames, video_id)
+        print("ocr done")
+        
+        bb_values = utils.extract_bb_values(ocr_results)
+        print("text extraction done")
         
         # Store OCR results in the database
-        database.store_ocr_results_in_database(video_id, ocr_results)
+        database.store_ocr_results_in_database(video_id, bb_values)
 
         return jsonify({'success': True, 'ocr_results': ocr_results})
 

@@ -1,3 +1,5 @@
+import re
+
 def calculate_cropping_region(selected_squares, grid_size, image_dimensions):
     print("calculate_cropping_region")
     print("selected_squares:", selected_squares)
@@ -50,3 +52,26 @@ def calculate_cropping_region(selected_squares, grid_size, image_dimensions):
         lower += buffer
             
     return (left, upper, right, lower)
+
+def extract_bb_values(ocr_results):
+    print("extract_bb_values")
+    bb_values = []
+
+    pattern = r"(\d+\.\d+\sBB|\d+\sBB)"
+
+    for result in ocr_results:
+        print("result:", result)
+        frame_index = result['frame_index']
+        ocr_text = result['ocr_text']
+        print("ocr_text:", ocr_text)
+        matches = re.findall(pattern, ocr_text)
+        print("matches:", matches)
+        for match in matches:
+            bb_value = match.replace("BB", "").strip()
+            bb_values.append({
+                'frame_index': frame_index,
+                'bb_value': bb_value
+            })
+            print("bb_value:", bb_value)
+            
+    return bb_values

@@ -7,4 +7,4 @@ class Config:
     USER_SUBMISSIONS_FOLDER = 'user_submissions'
     CROPPED_FRAMES_FOLDER = 'cropped_frames'
     FRAME_SIZE = (600, 330)
-    GRID_SIZE = (30, 30)
+    GRID_SIZE = (60, 60)

@@ -15,3 +15,12 @@ def crop_image(image, cropping_region):
     # Return the cropped image
     cropped_image = image.crop(cropping_region)
     return cropped_image
+
+def greyscale_image(image):
+    greyscaled_image = image.convert('L')
+    return greyscaled_image
+
+def crop_and_greyscale_image(image, cropping_region):
+    cropped_image = crop_image(image, cropping_region)
+    greyscaled_image = greyscale_image(cropped_image)
+    return greyscaled_image

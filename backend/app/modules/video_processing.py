@@ -25,16 +25,18 @@ def process_video(video_id):
     processed_frame_paths = []  # List to hold processed frame paths
 
     frame_index = 0
+    frame_skip = 10  # Only grab every 10th frame
+
     while True:
         success, frame = video.read()
         if not success:
             break
 
-        frame_path = os.path.join(video_processed_folder, f"{frame_index}.jpg")
-        cv2.imwrite(frame_path, frame)
-
-        processed_frame_paths.append(frame_path)  # Add frame path to the list
-
+        if frame_index % frame_skip == 0:
+            frame_path = os.path.join(video_processed_folder, f"{frame_index}.jpg")
+            cv2.imwrite(frame_path, frame)
+            processed_frame_paths.append(frame_path)  # Add frame path to the list
+        
         frame_index += 1
 
     return processed_frame_paths
@@ -53,24 +55,19 @@ def fetch_selected_frames(video_id):
 
 def crop_frames(frames, selected_squares):
     print("crop_frames")
-    print(frames)
     # Get the dimensions of the first frame
     frame_width, frame_height = frames[0].size
     
     # Get the grid size
     grid_size = app.config['GRID_SIZE']
-    
-    print("frame_width:", frame_width)
-    
+        
     # Calculate the cropping region
     cropping_region = calculate_cropping_region(selected_squares, grid_size, (frame_width, frame_height))
-    
-    print("cropping_region:", cropping_region)
     
     # Crop each frame
     cropped_frames = []
     for frame in frames:
-        cropped_frame = image_processing.crop_image(frame, cropping_region)
+        cropped_frame = image_processing.crop_and_greyscale_image(frame, cropping_region)
         cropped_frames.append(cropped_frame)
         
     return cropped_frames  
