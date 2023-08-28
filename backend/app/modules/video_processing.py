@@ -111,3 +111,7 @@ def load_processed_frames(processed_frame_paths):
 def load_video(video_id):
     video_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{video_id}.mp4")
     return cv2.VideoCapture(video_path)
+
+def enhance_video(frames):
+    for frame in frames:
+        image_processing.enhance_image(frame)

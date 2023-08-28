@@ -5,13 +5,16 @@ from app.modules.video_processing import save_cropped_frame
 import os
 import cv2
 import uuid
+import numpy as np
 from app import app
+
 
 def perform_ocr(cropped_frames, video_id):
     ocr_results = []
     for frame_index, cropped_frame in enumerate(cropped_frames):
         # Perform OCR on the cropped frame
-        ocr_text = pytesseract.image_to_string(cropped_frame)
+        ocr_text = pytesseract.image_to_string(cropped_frame, lang='eng', config='--psm 6')
+        print("ocr_text:", ocr_text)
 
         # Store OCR results in the database or a data structure
         ocr_results.append({

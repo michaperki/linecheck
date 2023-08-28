@@ -31,6 +31,28 @@ def process_video_route(video_id):
 
 # new routes below
 
+@app.route('/fetch_thumbnails/<path:video_id>')
+def fetch_thumbnails(video_id):
+    print("thumbnail endpoint")    
+    # Construct the full path using the project's root directory
+    root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))  # Adjust the number of '..' based on your project structure
+    full_path = os.path.join(root_dir, 'backend', 'uploaded_videos', 'frames', video_id)
+    print("Full path:", full_path)
+    
+    # Get the list of files in the folder
+    files = os.listdir(full_path)
+    
+    # Sort the files based on their names
+    files.sort()
+    
+    # Get 7 frames, evenly spaced out
+    thumbnail_frames = [files[i] for i in range(0, len(files), len(files) // 7)]
+    
+    # Construct the full path for each frame
+    thumbnail_paths = [os.path.join(full_path, frame) for frame in thumbnail_frames]
+    
+    return jsonify({'thumbnail_paths': thumbnail_paths})
+
 @app.route('/images/<path:video_id>/<path:frame_filename>')
 def images(video_id, frame_filename):
     print("images endpoint")    
@@ -40,6 +62,7 @@ def images(video_id, frame_filename):
     print("Full path:", full_path)
     
     return send_from_directory(os.path.join(root_dir, 'backend', 'uploaded_videos', 'frames', video_id), frame_filename)
+    
 
 @app.route("/upload_video", methods=["POST"])
 def upload_video():
@@ -122,6 +145,8 @@ def submit_selection():
             # Save the cropped frames
             video_processing.save_cropped_frames(cropped_frames, video_id, region_type)
             print(f"{region_type} cropping saved")
+            
+            video_processing.enhance_video(cropped_frames)
 
             # Perform OCR analysis on cropped frames and store OCR results
             ocr_results = ocr_processing.perform_ocr(cropped_frames, video_id)

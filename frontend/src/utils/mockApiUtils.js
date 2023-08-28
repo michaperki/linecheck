@@ -71,6 +71,14 @@ export const getFirstFrameUrl = async (videoId) => {
   return `${BASE_URL}/images/${videoId}/frame.jpg`; // Assuming 'frame.jpg' is the filename of the first frame
 };
 
+export const getThumbnailUrls = async (videoId) => {
+  // Simulate a delay
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+  // Return URL to fetch image from the backend
+  return `${BASE_URL}/fetch_thumbnails/${videoId}`;
+};
+
 // Mock function to simulate sending grid selection to the backend
 export const sendGridSelection = async (videoId, selectedRegions) => {
   // Simulate a delay

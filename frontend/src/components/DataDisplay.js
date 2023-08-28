@@ -34,14 +34,17 @@ const DataDisplay = () => {
     // Frame 2, Stack, Opponent
     // ...
 
-    // First, we need to combine the Opponent and Stack arrays into a single array
+    // First, we need to combine the Opponent, Stack, and HoleCard arrays into a single array
     const combinedResults = ocrResults.Opponent.map(
       (opponentResult, index) => {
         const stackResult = ocrResults.Stack[index];
+        const holeCard_A_Result = ocrResults.HoleCard_A[index];
+        const holeCard_B_Result = ocrResults.HoleCard_B[index];
         return {
           frameIndex: opponentResult.frame_index,
           opponentText: opponentResult.ocr_text,
           stackText: stackResult.ocr_text,
+          holeCardText: `${holeCard_A_Result.ocr_text} ${holeCard_B_Result.ocr_text}`,
         };
       }
 
@@ -58,6 +61,7 @@ const DataDisplay = () => {
             opponentStackSize: extractStackSize(combinedResult.opponentText),
             stackText: combinedResult.stackText,
             stackStackSize: extractStackSize(combinedResult.stackText),
+            holeCardText: combinedResult.holeCardText,
             timestamp: calculateTimestamp(combinedResult.frameIndex),
           };
         }

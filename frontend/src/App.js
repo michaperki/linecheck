@@ -5,27 +5,26 @@ import UploadPage from "./pages/UploadPage";
 import AnalysisPage from "./pages/AnalysisPage";
 import DataDisplay from "./components/DataDisplay";
 import Header from "./components/Header";
-import { getFirstFrameUrl, generateVideoId, sendGridSelection } from "./utils/mockApiUtils"; // Import the necessary utility functions
+import { getThumbnailUrls, sendGridSelection } from "./utils/mockApiUtils"; // Import the necessary utility functions
 
 function App() {
   const [firstFrameUrl, setFirstFrameUrl] = useState(null);
+  const [thumbnailUrls, setThumbnailUrls] = useState(null);
   const [videoId, setVideoId] = useState(""); // Initialize videoId as an empty string
 
   useEffect(() => {
     // Fetch the first frame URL and video ID when the component mounts
-    fetchFirstFrameData();
+    fetchThumbnailData();
   }, []);
 
-  const fetchFirstFrameData = async () => {
+  const fetchThumbnailData = async () => {
     try {
-      // Simulate fetching data from the API
-      const response = await getFirstFrameUrl(videoId);
-
-      // Set the first frame URL and video ID in state
-      setFirstFrameUrl(response.url);
-      setVideoId(response.videoId);
+      // Fetch the thumbnail URLs
+      const thumbnailUrls = await getThumbnailUrls(videoId);
+      setThumbnailUrls(thumbnailUrls);
+      setFirstFrameUrl(thumbnailUrls[0]);
     } catch (error) {
-      console.error("Error fetching first frame data:", error);
+      console.error("Error fetching thumbnail data:", error);
     }
   };
 
@@ -57,6 +56,7 @@ function App() {
             element={
               <AnalysisPage
                 firstFrameUrl={firstFrameUrl}
+                thumbnailUrls={thumbnailUrls}
                 handleGridSelection={handleGridSelection}
               />
             }
