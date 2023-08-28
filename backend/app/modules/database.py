@@ -51,3 +51,10 @@ def store_ocr_results_in_database(video_id, ocr_results):
 def get_ocr_results_from_database(video_id):
     return ocr_results_db.get(video_id, [])
 
+def store_ocr_results_by_type_in_database(video_id, ocr_results_by_type):
+    ocr_results_db[video_id] = ocr_results_by_type
+    save_database_to_json()
+    
+def store_selected_regions_in_database(video_id, selected_regions):
+    videos_db[video_id] = selected_regions
+    save_database_to_json()

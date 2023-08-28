@@ -1,5 +1,173 @@
 {
-    "videos": {},
+    "videos": {
+        "1382fd6c-6c9e-4f17-99c2-479f5c8b6ae4": [],
+        "32795f2a-f02b-4604-8f37-8da9d015fe5d": [],
+        "d00391a4-5372-4c30-82fb-f6d15ef77ac9": [
+            {
+                "index": 2668,
+                "type": "Stack"
+            },
+            {
+                "index": 2732,
+                "type": "Stack"
+            },
+            {
+                "index": 2366,
+                "type": "HoleCards"
+            },
+            {
+                "index": 2549,
+                "type": "HoleCards"
+            }
+        ],
+        "d7f60284-7383-41b2-b86e-34187b2648f2": [
+            {
+                "index": 2668,
+                "type": "Stack"
+            },
+            {
+                "index": 2733,
+                "type": "Stack"
+            },
+            {
+                "index": 2366,
+                "type": "HoleCards"
+            },
+            {
+                "index": 2549,
+                "type": "HoleCards"
+            }
+        ],
+        "9931bf39-05ca-4193-a165-f27d9bd3a2ea": [],
+        "076c4171-9ea6-42c9-af9b-826c54e2bf26": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "HoleCards",
+                "squares": [
+                    2366,
+                    2549
+                ]
+            }
+        ],
+        "e7f62cfe-b859-4178-9928-1e8760cafa19": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "HoleCards",
+                "squares": [
+                    2366,
+                    2549
+                ]
+            }
+        ],
+        "7458ac19-32b1-44da-9814-0ef2a8342d2a": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "HoleCards",
+                "squares": [
+                    2366,
+                    2549
+                ]
+            }
+        ],
+        "8eb4f108-e298-4a40-82a8-48a466457902": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "HoleCards",
+                "squares": [
+                    2368,
+                    2428
+                ]
+            }
+        ],
+        "1462d699-f20f-40e9-9f12-79cd3e425aa0": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2669,
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "HoleCards",
+                "squares": [
+                    2428
+                ]
+            }
+        ],
+        "df430350-0224-426a-b8d8-54e396da35cf": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "Opponent",
+                "squares": [
+                    2033,
+                    2098
+                ]
+            }
+        ],
+        "11f5d5f7-acbd-4ddd-891b-d8b0d3865652": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "Opponent",
+                "squares": [
+                    2033,
+                    2098
+                ]
+            }
+        ],
+        "d3d38c39-6d79-4f47-8b3c-e16020891efb": [
+            {
+                "type": "Stack",
+                "squares": [
+                    2668,
+                    2733
+                ]
+            },
+            {
+                "type": "Opponent",
+                "squares": [
+                    2033,
+                    2098
+                ]
+            }
+        ]
+    },
     "selected_squares": {
         "d0488b6a-5e52-4bd3-b954-5a65efc70dad": [
             734,
@@ -68,8 +236,8 @@
             2968
         ],
         "null": [
-            2908,
-            2972
+            2668,
+            2733
         ],
         "53cd6e2e-6180-4c63-943a-8a6ea509c445": [
             2908,
@@ -95,10 +263,27 @@
             2668,
             2733
         ],
-        "test_video": [
-            1,
-            2,
-            3
+        "66206786-b5be-4884-bbdc-0121b9749b12": [
+            2366,
+            2550
+        ],
+        "25590591-342a-461c-b715-210eda77b68b": [
+            {
+                "index": 2668,
+                "type": "Stack"
+            },
+            {
+                "index": 2732,
+                "type": "Stack"
+            },
+            {
+                "index": 2366,
+                "type": "HoleCards"
+            },
+            {
+                "index": 2550,
+                "type": "HoleCards"
+            }
         ]
     },
     "ocr_results": {
@@ -8904,6 +9089,2146 @@
                 "frame_index": 172,
                 "bb_value": "82.82"
             }
-        ]
+        ],
+        "66206786-b5be-4884-bbdc-0121b9749b12": [],
+        "1382fd6c-6c9e-4f17-99c2-479f5c8b6ae4": {},
+        "32795f2a-f02b-4604-8f37-8da9d015fe5d": {},
+        "9931bf39-05ca-4193-a165-f27d9bd3a2ea": {},
+        "7458ac19-32b1-44da-9814-0ef2a8342d2a": {
+            "Stack": [
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 0,
+                    "ocr_text": "etal\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 1,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 2,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 3,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 4,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 5,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 6,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 7,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 8,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 9,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 10,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 11,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 12,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 13,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 14,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 15,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 16,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 17,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 18,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 19,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 20,
+                    "ocr_text": "micnaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 21,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 22,
+                    "ocr_text": "a tetdall\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 23,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 24,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 25,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 26,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 27,
+                    "ocr_text": "etal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 28,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 29,
+                    "ocr_text": "a hetal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 30,
+                    "ocr_text": "a htald\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 31,
+                    "ocr_text": "a hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 32,
+                    "ocr_text": "micnaperk!\nCYE:yA=}=)\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 33,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 34,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                }
+            ],
+            "HoleCards": [
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 0,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 1,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 2,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 3,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 4,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 5,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 6,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 7,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 8,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 9,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 10,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 11,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 12,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 13,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 14,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 15,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 16,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 17,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 18,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 19,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 20,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 21,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 22,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 23,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 24,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 25,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 26,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 27,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 28,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 29,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 30,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 31,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 32,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 33,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "7458ac19-32b1-44da-9814-0ef2a8342d2a",
+                    "frame_index": 34,
+                    "ocr_text": " \n\f"
+                }
+            ]
+        },
+        "8eb4f108-e298-4a40-82a8-48a466457902": {
+            "Stack": [
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 0,
+                    "ocr_text": "etal\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 1,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 2,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 3,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 4,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 5,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 6,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 7,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 8,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 9,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 10,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 11,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 12,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 13,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 14,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 15,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 16,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 17,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 18,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 19,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 20,
+                    "ocr_text": "micnaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 21,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 22,
+                    "ocr_text": "a tetdall\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 23,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 24,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 25,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 26,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 27,
+                    "ocr_text": "etal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 28,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 29,
+                    "ocr_text": "a hetal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 30,
+                    "ocr_text": "a htald\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 31,
+                    "ocr_text": "a hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 32,
+                    "ocr_text": "micnaperk!\nCYE:yA=}=)\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 33,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 34,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                }
+            ],
+            "HoleCards": [
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 0,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 1,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 2,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 3,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 4,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 5,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 6,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 7,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 8,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 9,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 10,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 11,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 12,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 13,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 14,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 15,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 16,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 17,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 18,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 19,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 20,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 21,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 22,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 23,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 24,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 25,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 26,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 27,
+                    "ocr_text": " \n\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 28,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 29,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 30,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 31,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 32,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 33,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "8eb4f108-e298-4a40-82a8-48a466457902",
+                    "frame_index": 34,
+                    "ocr_text": "\f"
+                }
+            ]
+        },
+        "1462d699-f20f-40e9-9f12-79cd3e425aa0": {
+            "Stack": [
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 0,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 1,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 2,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 3,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 4,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 5,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 6,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 7,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 8,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 9,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 10,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 11,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 12,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 13,
+                    "ocr_text": "michaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 14,
+                    "ocr_text": "michaperki\n\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 15,
+                    "ocr_text": "michaperki\n\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 16,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 17,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 18,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 19,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 20,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 21,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 22,
+                    "ocr_text": "michaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 23,
+                    "ocr_text": "michaperki\n\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 24,
+                    "ocr_text": "michaperki\n\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 25,
+                    "ocr_text": "michaperki\n\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 26,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 27,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 28,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 29,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 30,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 31,
+                    "ocr_text": "michaperki\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 32,
+                    "ocr_text": "michaperki\n\nCYR: YA=1=)\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 33,
+                    "ocr_text": "michaperki\n\nCYR: YA=1=)\n\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 34,
+                    "ocr_text": "michaperki\n\nCYR: YA=1=)\n\f"
+                }
+            ],
+            "HoleCards": [
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 0,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 1,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 2,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 3,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 4,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 5,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 6,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 7,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 8,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 9,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 10,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 11,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 12,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 13,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 14,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 15,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 16,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 17,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 18,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 19,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 20,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 21,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 22,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 23,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 24,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 25,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 26,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 27,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 28,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 29,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 30,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 31,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 32,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 33,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "1462d699-f20f-40e9-9f12-79cd3e425aa0",
+                    "frame_index": 34,
+                    "ocr_text": "\f"
+                }
+            ]
+        },
+        "df430350-0224-426a-b8d8-54e396da35cf": {
+            "Stack": [
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 0,
+                    "ocr_text": "etal\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 1,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 2,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 3,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 4,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 5,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 6,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 7,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 8,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 9,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 10,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 11,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 12,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 13,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 14,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 15,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 16,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 17,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 18,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 19,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 20,
+                    "ocr_text": "micnaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 21,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 22,
+                    "ocr_text": "a tetdall\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 23,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 24,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 25,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 26,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 27,
+                    "ocr_text": "etal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 28,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 29,
+                    "ocr_text": "a hetal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 30,
+                    "ocr_text": "a htald\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 31,
+                    "ocr_text": "a hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 32,
+                    "ocr_text": "micnaperk!\nCYE:yA=}=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 33,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 34,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                }
+            ],
+            "Opponent": [
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 0,
+                    "ocr_text": "Bernd siaatulaireapebnalped\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 1,
+                    "ocr_text": "Beesiomingtdcragpincytocg\n\nBERL =}=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 2,
+                    "ocr_text": "Beesiomagytlsragginch eco\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 3,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 4,
+                    "ocr_text": "Srctominatin innit\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 5,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 6,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 7,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 8,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 9,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 10,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 11,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 12,
+                    "ocr_text": "Srcfegrgilpinn hart tested\n\naOR =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 13,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 14,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 15,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 16,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 17,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 18,
+                    "ocr_text": "Bereta asichernr bork\n\ngO} =)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 19,
+                    "ocr_text": "Srctiys sisi henner\n\ngO =}=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 20,
+                    "ocr_text": "Stays henry iortgiested\n\ngO =]=)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 21,
+                    "ocr_text": "Schau aaisi henry horttnsted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 22,
+                    "ocr_text": "Stays heonngg honk insted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 23,
+                    "ocr_text": "beatterigtecy etapa ial\n\nCAT =} =}\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 24,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 25,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 26,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 27,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 28,
+                    "ocr_text": "is, pte laisdbegtahortal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 29,
+                    "ocr_text": "tepprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 30,
+                    "ocr_text": "tapprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 31,
+                    "ocr_text": "feppebetepal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 32,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 33,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "df430350-0224-426a-b8d8-54e396da35cf",
+                    "frame_index": 34,
+                    "ocr_text": "0 BB\n\f"
+                }
+            ]
+        },
+        "11f5d5f7-acbd-4ddd-891b-d8b0d3865652": {
+            "Stack": [
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 0,
+                    "ocr_text": "etal\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 1,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 2,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 3,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 4,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 5,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 6,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 7,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 8,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 9,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 10,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 11,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 12,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 13,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 14,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 15,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 16,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 17,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 18,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 19,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 20,
+                    "ocr_text": "micnaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 21,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 22,
+                    "ocr_text": "a tetdall\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 23,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 24,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 25,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 26,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 27,
+                    "ocr_text": "etal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 28,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 29,
+                    "ocr_text": "a hetal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 30,
+                    "ocr_text": "a htald\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 31,
+                    "ocr_text": "a hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 32,
+                    "ocr_text": "micnaperk!\nCYE:yA=}=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 33,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 34,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                }
+            ],
+            "Opponent": [
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 0,
+                    "ocr_text": "Bernd siaatulaireapebnalped\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 1,
+                    "ocr_text": "Beesiomingtdcragpincytocg\n\nBERL =}=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 2,
+                    "ocr_text": "Beesiomagytlsragginch eco\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 3,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 4,
+                    "ocr_text": "Srctominatin innit\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 5,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 6,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 7,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 8,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 9,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 10,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 11,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 12,
+                    "ocr_text": "Srcfegrgilpinn hart tested\n\naOR =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 13,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 14,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 15,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 16,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 17,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 18,
+                    "ocr_text": "Bereta asichernr bork\n\ngO} =)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 19,
+                    "ocr_text": "Srctiys sisi henner\n\ngO =}=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 20,
+                    "ocr_text": "Stays henry iortgiested\n\ngO =]=)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 21,
+                    "ocr_text": "Schau aaisi henry horttnsted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 22,
+                    "ocr_text": "Stays heonngg honk insted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 23,
+                    "ocr_text": "beatterigtecy etapa ial\n\nCAT =} =}\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 24,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 25,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 26,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 27,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 28,
+                    "ocr_text": "is, pte laisdbegtahortal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 29,
+                    "ocr_text": "tepprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 30,
+                    "ocr_text": "tapprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 31,
+                    "ocr_text": "feppebetepal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 32,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 33,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "11f5d5f7-acbd-4ddd-891b-d8b0d3865652",
+                    "frame_index": 34,
+                    "ocr_text": "0 BB\n\f"
+                }
+            ]
+        },
+        "d3d38c39-6d79-4f47-8b3c-e16020891efb": {
+            "Stack": [
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 0,
+                    "ocr_text": "etal\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 1,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 2,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 3,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 4,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 5,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 6,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 7,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 8,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 9,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 10,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 11,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 12,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 13,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 14,
+                    "ocr_text": "micnaperk!\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 15,
+                    "ocr_text": "micnaperki\n57.86 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 16,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 17,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 18,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 19,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 20,
+                    "ocr_text": "micnaperki\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 21,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 22,
+                    "ocr_text": "a tetdall\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 23,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 24,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 25,
+                    "ocr_text": "micnaperk!\n53.56 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 26,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 27,
+                    "ocr_text": "etal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 28,
+                    "ocr_text": "al hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 29,
+                    "ocr_text": "a hetal\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 30,
+                    "ocr_text": "a htald\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 31,
+                    "ocr_text": "a hetall\n39.50 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 32,
+                    "ocr_text": "micnaperk!\nCYE:yA=}=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 33,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 34,
+                    "ocr_text": "micnaperk!\n82.82 BB\n\f"
+                }
+            ],
+            "Opponent": [
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 0,
+                    "ocr_text": "Bernd siaatulaireapebnalped\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 1,
+                    "ocr_text": "Beesiomingtdcragpincytocg\n\nBERL =}=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 2,
+                    "ocr_text": "Beesiomagytlsragginch eco\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 3,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 4,
+                    "ocr_text": "Srctominatin innit\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 5,
+                    "ocr_text": "Serctynaitin hoon vtec\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 6,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 7,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 8,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 9,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 10,
+                    "ocr_text": "Sprtymisatin oer arttested\n\nBERL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 11,
+                    "ocr_text": "Serctonaiein hoor drk tested\n\n18.36 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 12,
+                    "ocr_text": "Srcfegrgilpinn hart tested\n\naOR =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 13,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 14,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 15,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 16,
+                    "ocr_text": "Srctiys sais henner\n\ngO =)=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 17,
+                    "ocr_text": "Srctiye aati einnm rk tested\n\nORL =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 18,
+                    "ocr_text": "Bereta asichernr bork\n\ngO} =)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 19,
+                    "ocr_text": "Srctiys sisi henner\n\ngO =}=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 20,
+                    "ocr_text": "Stays henry iortgiested\n\ngO =]=)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 21,
+                    "ocr_text": "Schau aaisi henry horttnsted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 22,
+                    "ocr_text": "Stays heonngg honk insted\n\n14.06 BB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 23,
+                    "ocr_text": "beatterigtecy etapa ial\n\nCAT =} =}\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 24,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 25,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 26,
+                    "ocr_text": "betsy Pench tata tl\n\nCATR =} =}\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 27,
+                    "ocr_text": "beth Pinch stato tal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 28,
+                    "ocr_text": "is, pte laisdbegtahortal\n\nCATR =} =)\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 29,
+                    "ocr_text": "tepprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 30,
+                    "ocr_text": "tapprcgtetorgal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 31,
+                    "ocr_text": "feppebetepal\n\nBB\n\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 32,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 33,
+                    "ocr_text": "\f"
+                },
+                {
+                    "video_id": "d3d38c39-6d79-4f47-8b3c-e16020891efb",
+                    "frame_index": 34,
+                    "ocr_text": "0 BB\n\f"
+                }
+            ]
+        }
     }
 }

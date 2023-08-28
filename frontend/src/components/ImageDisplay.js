@@ -1,6 +1,6 @@
 // ImageDisplay.js
-import React from 'react';
-import './ImageDisplay.css';
+import React from "react";
+import "./ImageDisplay.css";
 
 const ImageDisplay = ({ firstFrameUrl, selectedSquares, onSquareClick }) => {
   const numRows = 60;
@@ -19,20 +19,18 @@ const ImageDisplay = ({ firstFrameUrl, selectedSquares, onSquareClick }) => {
             {Array.from({ length: numCols }).map((_, colIndex) => (
               <div
                 key={colIndex}
-                className={`grid-square ${selectedSquares.includes(
-                  rowIndex * numCols + colIndex
-                ) ? 'selected' : ''}`}
+                className={`grid-square ${
+                  selectedSquares.includes(rowIndex * numCols + colIndex)
+                    ? "selected"
+                    : ""
+                }`}
                 onClick={() => handleSquareClick(rowIndex, colIndex)}
               />
             ))}
           </div>
         ))}
       </div>
-      <img
-        src={firstFrameUrl}
-        alt="First Frame"
-        className="img"
-      />
+      <img src={firstFrameUrl} alt="First Frame" className="img" />
     </div>
   );
 };

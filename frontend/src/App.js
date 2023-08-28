@@ -29,10 +29,10 @@ function App() {
     }
   };
 
-  const handleGridSelection = async (selectedQuadrant) => {
+  const handleGridSelection = async (selectedRegions) => {
     try {
       // Send grid selection to the backend
-      const response = await sendGridSelection(videoId, selectedQuadrant);
+      const response = await sendGridSelection(videoId, selectedRegions);
       if (response.success) {
         alert('Selection submitted successfully!');
       }

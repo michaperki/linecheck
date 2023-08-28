@@ -25,7 +25,7 @@ def process_video(video_id):
     processed_frame_paths = []  # List to hold processed frame paths
 
     frame_index = 0
-    frame_skip = 10  # Only grab every 10th frame
+    frame_skip = 50  # Only grab every 10th frame
 
     while True:
         success, frame = video.read()
@@ -73,18 +73,21 @@ def crop_frames(frames, selected_squares):
     return cropped_frames  
 
 
-def save_cropped_frame(cropped_frame, video_id, frame_index, square_index):
+def save_cropped_frame(cropped_frame, video_id, frame_index, type):
     print("save_cropped_frame")
-    output_folder = os.path.join(app.config['CROPPED_FRAMES_FOLDER'], video_id)
+    output_folder = os.path.join(app.config['CROPPED_FRAMES_FOLDER'], video_id, type)
     os.makedirs(output_folder, exist_ok=True)
 
-    output_filename = f"frame_{frame_index}_square_{square_index}.png"
+    output_filename = f"frame_{frame_index}.png"
     output_path = os.path.join(output_folder, output_filename)
     print("output_path:", output_path)
 
     cropped_frame.save(output_path)  # Save cropped frame using PIL
 
-            
+def save_cropped_frames(cropped_frames, video_id, type):
+    for frame_index, cropped_frame in enumerate(cropped_frames):
+        save_cropped_frame(cropped_frame, video_id, frame_index, type)
+           
 def load_frames(video_id):
     frames_folder = os.path.join(app.config['FRAMES_FOLDER'], video_id)
     frames = []
@@ -104,10 +107,6 @@ def load_processed_frames(processed_frame_paths):
         frame = image_processing.load_image(frame_path)
         frames.append(frame)
     return frames
-
-def save_cropped_frames(cropped_frames, video_id):
-    for frame_index, cropped_frame in enumerate(cropped_frames):
-        save_cropped_frame(cropped_frame, video_id, frame_index, 0)
         
 def load_video(video_id):
     video_path = os.path.join(app.config['UPLOAD_FOLDER'], f"{video_id}.mp4")
